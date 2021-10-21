@@ -16,7 +16,6 @@ struct LandMarkRowList :View
 //        }.listStyle(.insetGrouped)
         
         List(landmarks){  item in
-           
             LandmarkRow(landmark: item)
         }
     }

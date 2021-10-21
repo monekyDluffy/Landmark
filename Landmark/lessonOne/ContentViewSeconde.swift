@@ -44,3 +44,9 @@ struct ContentViewSecondeContentView: View {
         }
     }
 }
+
+//struct LandmarkDetail_Previews1: PreviewProvider {
+//    static var previews: some View {
+//        ContentViewSecondeContentView()
+//    }
+//}
