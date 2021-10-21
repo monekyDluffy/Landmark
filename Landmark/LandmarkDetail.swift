@@ -19,7 +19,7 @@ struct LandmarkDetail : View
             CircleImage().offset(y: -130)
                 .padding(.bottom, -130)
             
-            VStack {
+            VStack(alignment: .leading) {
                 Text("Turtle Rock")
                     .font(.title).foregroundColor(.primary)
                 
@@ -29,20 +29,18 @@ struct LandmarkDetail : View
                     Text("california")
                 }
                 .font(.subheadline).foregroundColor(.secondary)
-//                这里应该是针对 HSstack里面的元素进行一次总体赋值等于下面的代码
                 
+                Divider()
                 
+                Text("about Turtle Rock")
                 
-            }
-            
-            Divider()
+                Text("Descriptive text goes here.")
 
+                
+  
+            }.padding()
             
-            
-            
-            
-            
-         Spacer()
+           Spacer()
         }
     }
 }

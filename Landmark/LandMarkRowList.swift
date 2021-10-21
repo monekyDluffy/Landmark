@@ -15,9 +15,18 @@ struct LandMarkRowList :View
 //                LandmarkRow(landmark: item)
 //        }.listStyle(.insetGrouped)
         
-        List(landmarks){  item in
-            LandmarkRow(landmark: item)
+        NavigationView
+        {
+            List(landmarks){  item in
+                
+                NavigationLink(destination: LandmarkDetail())
+                {
+                    LandmarkRow(landmark: item)
+                }
+               
+            }
         }
+       
     }
 }
 
