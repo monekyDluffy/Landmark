@@ -23,8 +23,7 @@ struct LandmarkRow: View
                 Image(systemName: "star.fill").foregroundColor(.purple)
                     .padding(.trailing,10)//距离尾部10个像素
             }
-                
-            
+
         }
         
     }

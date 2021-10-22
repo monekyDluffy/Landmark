@@ -43,7 +43,7 @@ struct LandMarkRowList :View
 //                    LandmarkRow(landmark: item)
 //                }
                
-            }.navigationTitle("landMarks")
+            }.nav
         }
        
     }
