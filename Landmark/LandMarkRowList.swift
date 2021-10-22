@@ -19,7 +19,7 @@ struct LandMarkRowList :View
         {
             List(landmarks){  item in
                 
-                NavigationLink(destination: LandmarkDetail())
+                NavigationLink(destination: LandmarkDetail(landmark:item))
                 {
                     LandmarkRow(landmark: item)
                 }

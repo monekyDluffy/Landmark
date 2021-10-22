@@ -29,8 +29,8 @@ struct LandmarkRowShow: View
 }
 
 
-//struct LandmarkRow_PreView: PreviewProvider {
-//    static var previews: some View {
-//        LandmarkRow(landmark: landmarks[0])
-//    }
-//}
+struct LandmarkRow_PreView: PreviewProvider {
+    static var previews: some View {
+        LandmarkRow(landmark: landmarks[0])
+    }
+}

@@ -10,20 +10,33 @@ import MapKit
 
 struct MapView: View
 {
-    @State private var region = MKCoordinateRegion(
-        center: CLLocationCoordinate2D(latitude: 31.1934719, longitude: 121.6025738), span: MKCoordinateSpan(latitudeDelta: 0.2, longitudeDelta: 0.2)
-    )
+    var coordinate:CLLocationCoordinate2D
+    @State private var region =  MKCoordinateRegion()
+    
     
     var body: some View
     {
         Map(coordinateRegion: $region)
+            .onAppear{}
     }
+    
+//这是一个set方法
+    private func setRegion(_ coordinate:  CLLocationCoordinate2D)
+    {
+        region = MKCoordinateRegion(
+            center: coordinate,
+            span: MKCoordinateSpan(latitudeDelta: 0.2, longitudeDelta: 0.2)
+        )
+    }
+    
+    
+    
 }
 
 struct MapView_preViews: PreviewProvider
 {
     static var previews: some View {
-        MapView()
+        MapView(coordinate:  CLLocationCoordinate2D(latitude: 31.1934719, longitude: 121.6025738))
     }
 }
 
