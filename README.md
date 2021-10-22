@@ -44,3 +44,14 @@ myView.contextMenu {
     }
 }
 ```
+
+Map(coordinateRegion: $region).onAppear{setRegion(coordinate)}
+
+map.onAppear是一个方法，不使用里面的参数，直接调用设置方法，证明 在struct中，不可以给私有的静态变量直接赋值
+    var coordinate:CLLocationCoordinate2D
+    @State private var region =  MKCoordinateRegion()
+    var body: some View
+    {
+        Map(coordinateRegion: $region).onAppear{setRegion(coordinate)}
+        
+    }
